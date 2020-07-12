@@ -159,9 +159,15 @@ function posts_display($atts)
 		}
 	}
 ?>
+<div>
+	<h2>
+		<a class="medium-link-text" href="https://medium.com/@askvinni">My Latest Writing on Medium</a>
+	</h2>
+</div>
 	<div id="display-medium-owl-demo" class="display-medium-owl-carousel">
 		<?php foreach ($items as $item) { ?>
 			<div class="display-medium-item">
+				<div>
 				<a href="<?php echo $item['url']; ?>" target="_blank">
 
 					<?php
@@ -171,8 +177,8 @@ function posts_display($atts)
 						echo '<div data-src="' . $item['image'] . '" class="lazyOwl medium-image"></div>';
 					}
 					?>
-					<<?php echo $title_tag; ?> class="display-medium-title details-title"><?php echo $item['title']; ?></<?php echo $title_tag; ?>>
-				</a>
+					<<?php echo $title_tag; ?> class="medium-title"><?php echo $item['title']; ?></<?php echo $title_tag; ?>>
+						</a></p></div>
 				<p class="display-medium-subtitle">
 					<?php echo $item['subtitle']; ?>
 				</p>
